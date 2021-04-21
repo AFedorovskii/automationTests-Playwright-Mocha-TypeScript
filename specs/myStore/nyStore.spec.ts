@@ -29,13 +29,13 @@ describe("Tests", async () => {
         await method.goPersonalInfo();
         await method.changePersonalInfo();
     })
-    it.only('Test3: Buy Blouse', async () => {
+    it('Test3: Buy Blouse', async () => {
         const method = new Method(page);
         await method.navigate();
         await method.login();
         await method.goHomePage();
         await method.searchBlouse();
-        await page.waitForTimeout(5000)
+        //await page.waitForTimeout(5000)
 
     })
 
