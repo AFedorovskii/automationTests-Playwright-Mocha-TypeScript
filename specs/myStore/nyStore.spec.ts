@@ -22,7 +22,7 @@ describe("Tests", async () => {
         await method.navigate();
         await method.login();
     });
-    it('Test2: Change Personal Info', async () => {
+    it.only('Test2: Change Personal Info', async () => {
         const method = new Method(page);
         await method.navigate();
         await method.login();

@@ -15,7 +15,7 @@ export class PageObjects extends TestData {
     olPassField = '#old_passwd'
     saveBtn = '[name="submitIdentity"]'
     //http://automationpractice.com/index.php?controller=identity
-    msgUpdSucces = '.alert.alert-success'
+    msgUpd = '.alert.alert-success'
     //http://automationpractice.com/index.php
     searchField = '#search_query_top'
     //http://automationpractice.com/index.php?controller=search&orderby=position&orderway=desc&search_query=blouse&submit_search=

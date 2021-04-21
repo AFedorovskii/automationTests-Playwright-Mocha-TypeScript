@@ -45,7 +45,10 @@ export class Method extends PageObjects {
         await console.log(`>Fill Password`);
         await this.page.click(this.saveBtn);
         await console.log(`>Click Save`);
-        let upd = await this.page.innerText(this.msgUpdSucces);
+       // await this.page.waitForTimeout(5000)
+        await this.page.waitForSelector(this.msgUpd);
+        let upd = await this.page.innerText(this.msgUpd);
+        await console.log(upd);
         expect(upd).contain('Your personal information has been successfully updated.');
     }
     async goHomePage() {
