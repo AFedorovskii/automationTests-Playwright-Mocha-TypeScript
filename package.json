@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "mocha ./dist_js/**/*.spec.js --timeout 30000"
+    "test": "mocha ./dist_js/**/*.spec.js --timeout 60000"
   },
   "devDependencies": {
     "mocha": "^8.3.0",
