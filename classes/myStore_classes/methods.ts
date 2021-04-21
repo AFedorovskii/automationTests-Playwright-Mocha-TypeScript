@@ -58,12 +58,16 @@ export class Method extends PageObjects {
         await this.page.press(this.searchField, 'Enter');
         await console.log(`>Press Enter`);
         await this.page.click(this.blouseImg);
+        await console.log(`>Click Blouse img`);
         await this.page.waitForSelector(this.addToCartBtn);
         await this.page.click(this.addToCartBtn);
+        await console.log(`>Click add to Cart`);
         await this.page.click(this.proceedBtn);
+        await console.log(`>Click Proceed`);
         let a = await this.page.isVisible(this.cartItem);
         expect(a).to.exist;
         await this.page.click(this.trashBtn);
+        await console.log(`>Click Trash`);
     }
 
 }
