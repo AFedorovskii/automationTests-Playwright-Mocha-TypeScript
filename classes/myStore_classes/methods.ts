@@ -45,7 +45,7 @@ export class Method extends PageObjects {
         await console.log(`>Fill Password`);
         await this.page.click(this.saveBtn);
         await console.log(`>Click Save`);
-        let upd = await this.page.innerText('.alert.alert-success');
+        let upd = await this.page.innerText(this.msgUpdSucces);
         expect(upd).contain('Your personal information has been successfully updated.');
     }
     async goHomePage() {
@@ -53,17 +53,17 @@ export class Method extends PageObjects {
         await console.log(`>Click Logo`);
     }
     async searchBlouse() {
-        await this.page.fill('#search_query_top', 'blouse');
+        await this.page.fill(this.searchField, 'blouse');
         await console.log(`>Fill blouse`);
-        await this.page.press('#search_query_top', 'Enter');
+        await this.page.press(this.searchField, 'Enter');
         await console.log(`>Press Enter`);
-        await this.page.click('img[title="Blouse"]');
-        await this.page.waitForSelector('#add_to_cart');
-        await this.page.click('#add_to_cart');
-        await this.page.click('[title="Proceed to checkout"]');
-        let a = await this.page.isVisible('#product_2_7_0_482582');
+        await this.page.click(this.blouseImg);
+        await this.page.waitForSelector(this.addToCartBtn);
+        await this.page.click(this.addToCartBtn);
+        await this.page.click(this.proceedBtn);
+        let a = await this.page.isVisible(this.cartItem);
         expect(a).to.exist;
-        await this.page.click('.icon-trash');
+        await this.page.click(this.trashBtn);
     }
 
 }
